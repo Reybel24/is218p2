@@ -1,9 +1,14 @@
 <?php
 
+// Used to define a custom PDO connection
 class pdoConnection{
     private $driver;
-    private $hostname, $username, $password, $db_name;
+    private $hostname;
+    private $username;
+    private $password;
+    private $db_name;
 
+    // Create a new PDO object
     public function __construct() {
         $database = require_once 'config.php';
         $this->driver= $database['driver'];
@@ -12,7 +17,7 @@ class pdoConnection{
         $this->password = $database['pass'];
         $this->db_name = $database['name'];
     }
-
+    // Attempt to connect to the DB
     public function connect() {
         try {
             $conn = new PDO("mysql:host = $this->hostname; dbname=$this->db_name", $this->username, $this->password);
