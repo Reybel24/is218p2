@@ -1,7 +1,8 @@
 <?php
 
 // Used to define a custom PDO connection
-class pdoConnection{
+class PdoConnection  extends PDO {
+
     private $driver;
     private $hostname;
     private $username;
