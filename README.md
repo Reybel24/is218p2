@@ -46,4 +46,5 @@ Amrut:
 styling/
 js/jquery
 
-Jeremy: TBD
+Jeremy: 
+exit.php
